@@ -3,7 +3,7 @@ const router = express.Router();
 
 const connection = require("./model/db");
 
-app
+
 
 router.get("/", (req, res) => {
   connection.query("SELECT*FROM users", (error, results) => {
