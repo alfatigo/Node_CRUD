@@ -1,18 +1,27 @@
-<div class="container">
-    <form action="/save" method="post">
+<div class="columns is-align-items">
+  <form action="/save" method="post" class="container box ">
+      <div class="field">
+
+    
+    <label for="" class="label">User</label>
+    <input type="text" id00="user" name="user" class="input" />
+</div>
+<div class="field">
+
+
+    <label for="" class="label"> Rol</label>
+    <div class="select">
+        <select name="rol" id="rol" >
+            <option value="Admin">Admin</option>
+            <option value="normal">normal</option>
+          </select>
       
-        <label for="">User</label>
-        <input type="text" id00="user" name="user">
+    </div>  
+</div>
+    <div class="field is-grouped">
         <br>
-        <label for="">Rol</label>
-       <select name="rol" id="rol">
-           <option value="Admin">Admin</option>
-           <option value="normal">normal</option>
-       </select>
-        
-        <div class="btn-box">
-            <button type="submit">Save</button>
-            <a href="/">Cancel</a>
-        </div>
-    </form>
+      <button type="submit" class="button is-link">Save</button>
+      <a href="/" class="button is-text">Cancel</a>
+    </div>
+  </form>
 </div>

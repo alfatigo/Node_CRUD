@@ -1,0 +1,38 @@
+<% if (user){%>
+  <div class=""> 
+<div class="columns is-align-items-stretch	" >
+  <form action="/update" method="POST" class="box container is-rounded">
+
+
+      
+      <input id="id" name="id" value="<%= user.Id %>" type="text" hidden>
+    <div class="">
+      <div class="control">
+      <label for="" class="label">User</label>
+      <input type="text" id="user" name="user" value="<%= user.user %>" class="input is-success "/>
+      <span class="icon is-small is-left">
+        <i class="fgg-user"></i>
+      </span>  
+    </div>
+    </div>
+    <div class="control" >
+      
+        <label for="" class="label"  >Rol</label>
+        <div class="select" >
+        <select name="rol" id="rol" class="select">
+          <option <%= user.rol == 'admin' ?  "selected" :  '' %> value="Admin">Admin</option>
+          <option <%= user.rol == 'normal' ?  "selected" :  '' %> value="normal" >normal</option>      
+       
+      </select>     
+    </div>
+    </div>
+    <br>
+    <div class="field is-grouped">
+      <button type="submit" class="button is-link">Save</button>
+      <a href="/" class="button is-text">Cancel</a>
+    </div>
+  
+  </form>
+</div>
+</div>
+<% } %>
